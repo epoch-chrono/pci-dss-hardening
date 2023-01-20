@@ -32,5 +32,5 @@ wget https://github.com/your-repo/pci-dss-hardening-scripts.zip
 unzip pci-dss-hardening-scripts.zip
 chmod +x script_name.sh
 sudo ./script_name.sh
-Please keep in mind that this script is intended to be used on AWS EC2 instances running Ubuntu 20.04
 ```
+Please keep in mind that this script is intended to be used on AWS EC2 instances running Ubuntu 20.04
