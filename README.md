@@ -1,6 +1,6 @@
-# PCI-DSS Hardening Scripts for Ubuntu 20.04
+# PCI-DSS Hardening Scripts for Ubuntu 20.04 on AWS EC2
 
-This project is a set of shell scripts for applying hardening on an Ubuntu 20.04 system to meet the security requirements of PCI-DSS certification.
+This project is a set of shell scripts for applying hardening on an Ubuntu 20.04 system running on AWS EC2 to meet the security requirements of PCI-DSS certification.
 
 The scripts include security settings for various services and packages, including:
 - SSH
@@ -18,4 +18,4 @@ sudo ./script_name.sh
 4. Be sure to test and verify the applied settings before implementing in a production environment.
 5. It is recommended to make a backup of the system before running the scripts.
 
-**Note:** The scripts have been tested and developed for Ubuntu 20.04, but can be adapted for other Linux distributions. Be sure to read and understand what each script does before running it. This project does not guarantee compliance with PCI-DSS and it is
+**Note:** The scripts have been tested and developed for Ubuntu 20.04 running on AWS EC2, but can be adapted for other Linux distributions. Be sure to read and understand what each script does before running it. This project does not guarantee compliance with PCI-DSS and it is the user's responsibility to verify that the settings meet the requirements of the certification.
