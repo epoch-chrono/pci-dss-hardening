@@ -19,3 +19,12 @@ sudo ./script_name.sh
 5. It is recommended to make a backup of the system before running the scripts.
 
 **Note:** The scripts have been tested and developed for Ubuntu 20.04 running on AWS EC2, but can be adapted for other Linux distributions. Be sure to read and understand what each script does before running it. This project does not guarantee compliance with PCI-DSS and it is the user's responsibility to verify that the settings meet the requirements of the certification.
+
+To use this script in the user data when launching an EC2 instance, add the following to the user data field:
+
+#!/bin/bash
+wget https://github.com/your-repo/pci-dss-hardening-scripts.zip
+unzip pci-dss-hardening-scripts.zip
+chmod +x script_name.sh
+sudo ./script_name.sh
+Please keep in mind that this script is intended to be used on AWS EC2 instances running Ubuntu 20.04
