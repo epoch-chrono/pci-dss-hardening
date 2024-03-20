@@ -114,7 +114,7 @@ echo "Feito!"
 
 #2.10. Garantir que a mensagem do dia esteja configurada corretamente
 
-sudo mkdir /etc/motd
+if ! sudo ls -la /etc/motd &>/dev/null; then sudo mkdir -v /etc/motd; fi
 sudo echo "O ACESSO NÃO AUTORIZADO A ESTE DISPOSITIVO É PROIBIDO
 Você deve ter permissão explícita e autorizada para acessar ou configurar este dispositivo. Tentativas e ações não autorizadas para acessar ou usar este sistema podem resultar em penalidades civis e/ou criminais. Todas as atividades realizadas neste dispositivo são registradas e monitoradas." >> /etc/motd
 
@@ -469,8 +469,8 @@ sudo usermod -g 0 root
 
 #2.87.Garantir que a máscara de usuário padrão seja 027 ou mais restritiva#
 
-sudo mkdir /opt/devops
-sudo mkdir /opt/devops/backup-hardening
+if ! sudo ls -la /opt/devops &>/dev/null; then sudo mkdir -v /opt/devops; fi
+if ! sudo ls -la /opt/devops/backup-hardening &>/dev/null; then sudo mkdir -v /opt/devops/backup-hardening; fi
 sudo cp -R /etc/profile.d/*.* /opt/devops/backup-hardening/
 sudo cp -R /etc/bash.bashrc /opt/devops/backup-hardening/
 sudo cp -R /etc/profile /opt/devops/backup-hardening/
